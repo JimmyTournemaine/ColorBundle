@@ -9,7 +9,7 @@ class ColorValidator extends ConstraintValidator
 {
 	public function validate($value, Constraint $constraint)
 	{
-		if(!ColorValue::isColorValue($value))
+		if(!preg_match('/^\#[0-9]{6}/', $value))
 		{
 			$this->context->addViolation($constrint->message, array('%string%' => $value));
 		}
