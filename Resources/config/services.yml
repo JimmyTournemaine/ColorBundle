@@ -1,0 +1,6 @@
+services:
+
+    jt_commom_form.type.color:
+        class: JT\ColorBundle\Form\Type\ColorType
+        tags:
+            - { name: form.type, alias: color }
